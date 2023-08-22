@@ -6,12 +6,12 @@ function obtenerMayor(x, y) {
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:
 
-   if(x > y){
+   if(x === y){
       return x;
-   } else { 
-      return y;
-   }
+   } else if (y > x) { return y;
+   } else return x;
 }
+//console.log(obtenerMayor(23,103));
 
 function mayoriaDeEdad(edad) {
    // Determinar si la persona puede ingresar al evento según su edad.
@@ -25,6 +25,7 @@ function mayoriaDeEdad(edad) {
       return "Not allowed";
    }
 }
+//console.log(mayoriaDeEdad(25));
 
 function conection(status) {
    // El argumento "status" representa el estado de conexión de un usuario.
@@ -40,9 +41,9 @@ function conection(status) {
       return "Away";
    } else {
       return "Offline";
-   }
-   
+   } 
 }
+//console.log(conection(1));
 
 function saludo(idioma) {
    // Retornar un saludo en tres diferentes lenguajes:
@@ -52,16 +53,18 @@ function saludo(idioma) {
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
 
-   if (idioma === "aleman"){
-      return "Guten Tag!";
-   } else if (idioma === "mandarin"){
-      return "Ni Hao!";
-   } else if (idioma === "ingles"){
-      return "Hello!";
-   } else {
-      return "Hola!";
-   }
+   switch (idioma){
+   case "aleman":
+       return "Guten Tag!";
+   case "mandarin":
+       return "Ni Hao!";
+   case "ingles":
+       return "Hello!";
+   default:
+       return "Hola!";
 }
+}
+//console.log(saludo ("hola"));
 
 function colors(color) {
    // La función recibe un color. Retornar el string correspondiente:
@@ -86,6 +89,7 @@ function colors(color) {
          return "Color not found";
    }
 }
+console.log(colors("red"));
 
 function esDiezOCinco(num) {
    // Retornar true si "num" es 10 o 5.
